@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <TextView
+                style="@style/TeamNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/TextView_Padding"
+                android:text="@string/TeamA" />
+
+            <TextView
+                style="@style/ScoreTextView"
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/TextView_Padding"
+                android:text="@string/TeamATotal" />
+
+            <Button
+                style="@style/ScoreButtons"
+                android:onClick="threePointTeamA"
+                android:text="@string/ThreePtButton" />
+
+            <Button
+                style="@style/ScoreButtons"
+                android:onClick="twoPointTeamA"
+                android:text="@string/TwoPtButton" />
+
+            <Button
+                style="@style/ScoreButtons"
+                android:onClick="freeThrowTeamA"
+                android:text="@string/FTButton" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+        </View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <TextView
+                style="@style/TeamNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/TextView_Padding"
+                android:text="@string/TeamB" />
+
+            <TextView
+                style="@style/ScoreTextView"
+                android:id="@+id/team_b_score"
+                android:padding="@dimen/TextView_Padding"
+                android:text="@string/TeamBTotal" />
+
+            <Button
+                style="@style/ScoreButtons"
+                android:onClick="threePointTeamB"
+                android:text="@string/ThreePtButton" />
+
+            <Button
+                style="@style/ScoreButtons"
+                android:onClick="twoPointTeamB"
+                android:text="@string/TwoPtButton" />
+
+            <Button
+                style="@style/ScoreButtons"
+                android:onClick="freeThrowTeamB"
+                android:text="@string/FTButton" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetScore"
+        android:text="@string/ResetButton"
+        android:layout_marginBottom="@dimen/ResetButtonBottomMargin">
+    </Button>
+
+</RelativeLayout>
